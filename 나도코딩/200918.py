@@ -56,3 +56,71 @@
 # print("총 {0}대의 매물이 있습니다.".format(len(house)))
 # for h in house:
 #     h.show_detail()
+
+
+# 예외처리
+# try:
+#     print("나누기")
+#     num1 = int(input("첫번째 숫자 : "))
+#     num2 = int(input("두번째 숫자 : "))
+#     print("{0} / {1} = {2}".format(num1,num2, int(num1/num2)))
+# except ValueError:
+#     print("에러! 잘못된 값을 입력하였습니다.")
+# except ZeroDivisionError as err:
+#     print(err)
+# except:
+#     print("에러 발생")
+
+
+# 에러 발생시키기 -> 의도적으로 특정 에러를 발생시키는 것
+# try:
+#     print("한 자리 숫자 나누기")
+#     num1 = int(input("첫 번째 숫자: "))
+#     num2 = int(input("두 번째 숫자: "))
+#     if num1 >= 10 or num2 >=10:
+#         raise ValueError
+#     print("{0} / {1} = {2}".format(num1, num2, int(num1/num2)))
+# except ValueError:
+#     print("잘못된 값을 입력하였습니다. 한 자리 숫자만 입력하세요.")
+
+
+# Quiz) 시스템 코드를 확인하고 적절한 예외처리 구문을 넣으시오
+
+# Answer)
+# chicken = 10
+# waiting = 1
+# class SoldOutError(Exception):
+#     pass
+# try:
+#     while(True):
+#         print("[남은 치킨 : {0}]".format(chicken))
+#         order = int(input("치킨 몇 마리 주문하시겠습니까? "))
+#         if order > chicken:
+#             print("재료가 부족합니다.")
+#         elif order <= 0:
+#             raise ValueError
+#         else:
+#             print("[대기번호 {0}] {1} 마리 주문이 완료되었습니다."\
+#                   .format(waiting, order))
+#             waiting += 1
+#             chicken -= order
+#         if chicken <= 0:
+#             raise SoldOutError
+# except ValueError:
+#     print("잘못된 값을 입력하였습니다.")
+# except SoldOutError:
+#     print("재고가 소진되어 더이상 주문을 받지 않습니다.")
+
+
+# 패키지 : 모듈들의 합
+# import 사용시 주의사항
+# import ㅁㅁ.ㅇㅇ 부분에서 점(.) 뒤의 ㅇㅇ부분은 모듈이나 패키지만 가능
+# 클래스나 함수는 import를 바로 직접적으로 할 수 없음
+# 하지만! from ㅁㅁ.ㅇㅇ import ㅂㅂ 에서는 ㅂㅂ에 클래스 사용 가능
+
+
+# Quiz) 프로젝트 내에 나만의 시그니처를 남기는 모듈을 만드시오
+
+# Answer)
+# import byme
+# byme.sign()
