@@ -13,7 +13,6 @@ clock = pygame.time.Clock()
 
 background = pygame.image.load("background.png")
 
-print(background)
 
 character = pygame.image.load("C:/Users/dfjun/Workspace/somin_study/etc/나도코딩/pygame_basic/character.png")
 character_size = character.get_rect().size

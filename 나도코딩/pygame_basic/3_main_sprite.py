@@ -10,7 +10,6 @@ pygame.display.set_caption("My Game")
 
 background = pygame.image.load("background.png")
 
-print(background)
 
 # 캐릭터(스프라이트) 불러오기
 character = pygame.image.load("C:/Users/dfjun/Workspace/somin_study/etc/나도코딩/pygame_basic/character.png")

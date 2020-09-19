@@ -12,8 +12,6 @@ clock = pygame.time.Clock()
 
 background = pygame.image.load("background.png")
 
-print(background)
-
 character = pygame.image.load("C:/Users/dfjun/Workspace/somin_study/etc/나도코딩/pygame_basic/character.png")
 character_size = character.get_rect().size
 character_width = character_size[0]
@@ -28,9 +26,9 @@ character_speed = 0.6
 
 # 적 enemy 캐릭터
 enemy = pygame.image.load("C:/Users/dfjun/Workspace/somin_study/etc/나도코딩/pygame_basic/enemy.png")
-enemy_size = character.get_rect().size
-enemy_width = character_size[0]
-enemy_height = character_size[1]
+enemy_size = enemy.get_rect().size
+enemy_width = enemy_size[0]
+enemy_height = enemy_size[1]
 enemy_x_pos = (screen_width / 2) - (enemy_width / 2)
 enemy_y_pos = (screen_height / 2) - (enemy_height / 2)
 
