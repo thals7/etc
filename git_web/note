@@ -1,0 +1,7 @@
+HTML form 태그
+
+action : 폼 내부에 데이터를 보내는 목적지 url 지정
+enctype : 넘길때 content 타입 지정. 파일 넘길 때 주로 사용. "multipart/form-data"로 지정해서 사용.
+method : 폼을 서버로 전송하는 http 방식 지정. POST와 GET이 있음.
+target : action에서 지정한 스크립트 파일이 현재나 다른 위치에서 열리도록 지정.
+
